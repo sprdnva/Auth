@@ -10,6 +10,7 @@ mongoose.connect("mongodb://localhost:auth/auth", { useNewUrlParser: true });
 
 app.use(morgan("combined"));
 app.use(bodyParser.json({ type: "*/*" }));
+router(app);
 
 const port = process.env.PORT || 3090;
 const server = http.createServer(app);
